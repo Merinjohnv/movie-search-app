@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Movie Search App</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main class="card" role="main" aria-labelledby="title">
+            <header>
+                <div class="logo">MS</div>
+                <div>
+                    <h1 id="title">Movie Search App</h1>
+                </div>
+            </header>
+
+            <section class="search-panel">
+                <div class="row">
+                    <input id="query" type="search" placeholder="Search movies here" autocomplete="off"/>
+                    <select id="type">
+                        <option value="">All</option>
+                        <option value="movie">Movies</option>
+                        <option value="series">Series</option>
+                        <option value="episode">Episode</option>
+                    </select>
+                    <input id="year" type="number" placeholder="Year (optional)" min="1888" max="2100" />
+                    <button id="searchBtn" class="btn">Search</button>
+                </div>
+                <div class="meta-row">
+                    <div id="status" class="muted">Enter a title to begin.</div>
+                </div>
+            </section>
+
+            <section id="results" class="results-grid" aria-live="polite"></section>
+
+            <nav class="pagination" aria-label="Search results pagination">
+                <button id="prevBtn" class="btn secondary" disabled>Prev</button>
+                <div id="pageInfo" class="muted">Page 0 of 0</div>
+                <button id="nextBtn" class="btn secondary" disabled>Next</button>
+            </nav>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
